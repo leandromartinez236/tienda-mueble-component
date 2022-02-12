@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
+import Header from './ui/header/Header';
+import Hero from './ui/Hero';
+import CategoriaProducto from './ui/categoriaProducto/CategoriaProducto';
+import SobreNosotros from './ui/sobreNosotros/SobreNosotros';
+import NuestrosProductos from './ui/nuestrosProductos/NuestrosProductos';
+import Footer from './ui/footer/Footer';
+
+
+
+import img from './images/principal.jpg';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Header />
+      <Hero img={img}/>
+      <CategoriaProducto />
+      <SobreNosotros />
+      <NuestrosProductos />
+      <Footer>
+        <p className='copyright'>Todos los Derechos Reservados - TiendaMueble</p>    
+      </Footer>
     </div>
   );
 }
